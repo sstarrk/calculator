@@ -18,6 +18,19 @@ let a;
 let b;
 let operator;
 
+const clearAllButton = document.querySelector("#ac");
+clearAllButton.addEventListener("click", () => {
+    display.textContent = 0;
+})
+
+const clearEntryButton = document.querySelector("#ce");
+clearEntryButton.addEventListener("click", () => {
+    display.textContent = display.textContent.slice(0, -1);
+    if(display.textContent == "") {
+        display.textContent = "0";
+    }
+})
+
 function add(a, b) {
     return sum = a + b;
 }
